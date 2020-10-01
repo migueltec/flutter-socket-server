@@ -1,5 +1,8 @@
 const express = require('express');
 const path = require('path');
+
+require('heroku-self-ping').default(`https://${process.env.HEROKU_APP_NAME}.herokuapp.com`);
+
 require('dotenv').config();
 
 const app = express();
